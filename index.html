@@ -14,7 +14,7 @@
             document.write(`filter: ${filter}<br>`);
             document.write(filter.indexOf(navigator.platform.toLocaleLowerCase()));
             
-            if( 0 > filter.indexOf(navigator.platform.toLocaleLowerCase())){
+            if( 0 < filter.indexOf(navigator.platform.toLocaleLowerCase())){
                  alert('모바일입니다.');
                 // location.href='mobile.html';
             };
