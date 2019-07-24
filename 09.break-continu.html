@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //break
+        for (let index = 0; index < 10; index++) {
+            if(index==5){
+                break;
+            }
+            document.write(index);
+        }    
+        document.write('<hr>');
+
+        //continu
+        for (let index = 0; index < 10; index++) {
+            if(index==5){ // 5를 제외한 숫자를 출력
+                continue;
+            }
+            document.write(index);
+        } 
+        document.write('<hr>');
+
+        // 1~100 중, 5의 배수가 아닌 숫자 출력 
+        for (let index = 0; index <= 100; index++) {
+            if(index==5){ // 5를 제외한 숫자를 출력
+                continue;
+                document.write('<br>');
+            }
+            document.write(index,);
+        } 
+
+
+    </script>
+
+
+</body>
+</html>

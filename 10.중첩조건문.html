@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문제) 시간에 따라 아침,점심,저식
+        var date=new Date();
+        var hour=date.getHours();
+        if (hour<11) {//0~11
+            document.write('아침');            
+        }else{//11~23
+            if (hour<18) {//11~17
+                document.write('점심');
+            } else {//18~23
+                document.write('저녁');
+            }
+        }
+        //문제)1~100 사이의 숫자 중 2부터 10까지의 배수의 수와 그 숫자를 구하시오.
+        var result=""; //배수의 수를 담을 변수
+        for (var i = 1; i < 10; i++) {
+            for(var j=1; j<=100; j++){
+                if(j%i==0){
+                    result += j+'  ';
+                }
+            }
+            document.write(i,'의 배수 제외: <br>'+result);
+            document.write('<hr>');
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

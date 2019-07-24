@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24.BOM</title>
+</head>
+<body>
+    <script>
+        /* 
+            BOM 웹브라우저와 관련된 객체의 집합
+            window : 웹브라우저의 최상위 객체
+                - screen        : 화면
+                - navigator     : 웹브라우져
+                - location      : 주소
+                - history       : 기록
+                - document      : 문서
+        */
+    //    window.open('24.BOM.html','새창열기','width=300, height=300'); 
+    
+    window.onload=function(){
+        document.getElementById('result').innerText="내용변경";
+    }
+
+    //2초뒤에 다른 페이지로 이동하기
+    setTimeout(function(){
+        location.href='23.내장객체Array.html';
+    },2000)
+
+
+    </script>
+
+    
+
+    <div id="result">결과</div>
+
+</body>
+</html>

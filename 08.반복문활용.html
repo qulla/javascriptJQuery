@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08.반복문활용</title>
+</head>
+<body>
+
+    <script>
+        //문제) 1부터 100까지 2배수의 합
+        var sum=0;
+        for (let index = 1; index <= 100; index++) {
+            if (index%2==0){
+                document.write(index, '  ');
+                sum+=index;
+            }
+            
+        }
+        document.write('합계:', sum);
+        document.write('<br>' );
+
+
+        //문제) confirm()을 활용하여 확인버튼을 누르면...,
+        var i=0;
+        while (true) {
+            if (!confirm('계속 출력하시겠습니까?')) {
+                break; 
+            }  
+            i++;
+            alert(i+'번째 출력');          
+        }      
+        document.write('<hr>' );
+        document.write('프로그램이 종료되었습니다.' );
+
+
+</script>
+    
+</body>
+</html>

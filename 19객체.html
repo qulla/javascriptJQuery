@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19.객체</title>
+</head>
+<body>
+    <script>
+    /* 
+        여러개의 테이터를 저장하기 위한 방법
+        1. 배열: 위치갑(index)로 접근해서 값을 저장하며 []fmf tkdygksek.
+        2. 객체: 키값(속성)으로 접근해서 값을 저장혀며 {}를 사용한다.
+    */
+   
+    //문제) 폰의 정보를 저장하시오
+    //갤럭시, 삼성, 900000, black
+
+    //배열
+    var phone1=['갤럭시','삼성',900000,'black'];
+
+    //1. 객체의 선언 및 값 저정
+    
+    //객체
+    /* 
+        객체의 패턴
+        var 객체의이름={
+            속성이름:값,
+            속성이름:값,
+            속성이름:값,
+            ...
+        }
+    */
+
+    var phone2={
+        name:'갤럭시',
+        company:'삼성',
+        price:900000,
+        color:'black',
+    }
+
+    //2. 객체안에 있는 값 가조오기
+    //첫버째 방법: 객체명.속성이름
+    document.write(phone2.color);
+    //두번째 방법: 객체명['속성이름'] 주의사항 속성이름은 문자열로 넣어야한다.
+    document.write(phone2['color']);
+
+    //3.객체안의 값 변경하기
+    phone2.color='blue';
+    phone2['color']='red';
+    document.write('<br> 변겨된 색상:',phone2.color);
+
+    //4.객체안에 새로운 값 저장하기
+    phone2.powerOn=function(){
+        return '전원을 켭니다.';
+    }
+    phone2.powerOff=function(){
+        return '전원을 끕니다.';
+    }
+    //powerOn()은 phone2의 메소드다.
+    // phone2.powerOn();
+
+    //5.반복문을 사용하여 객체안의 값 순차적으로 출력하기
+    for (const key in phone2) {
+
+        console.log('값의 타입은?', typeof phone2[key]);
+        
+        if (key=='powerOn') {
+            document.write(phone2[key](),'<br>');
+            
+        } else {
+            document.write(phone2[key],'<br>');
+        }
+
+    }
+//문제)나의 정보를 객체로 만들고 출력하기
+//이름, 나이, 사는 곳, 좋아하는 색깔들(배열), 어떤것을 먹는다(메소드):음식을 메스츠 호출시 전달
+
+var person={
+
+        name:'찬호박',
+        age:'44',
+        address:'서울시 서대문구 북가좌동 11-11',
+        color:['black','red','green','yellow'],
+
+        eating:function(eat){
+        return this.name+ '은 ' + eat + "를(을) 먹는다";
+        }
+}
+    document.write('name: ', person.name , '<br>');
+    document.write('age: ', person.age, '<br>');
+    document.write('address: ', person.address, '<br>');
+    for (const key in person.color) {
+        document.write(person.color[key]);
+    }
+    document.write(person.eating('사과'));
+
+    //반복문을 사용하여 person의 정보 출력하기
+    document.write('<hr>반복문을 사용하여 person의 정보 출력하기<hr>');
+
+    for (const key in person) {
+        
+        if (typeof person[key]=='function') {
+            document.write(person.color('감자'),"<br>");
+            
+        } else {
+            document.write(person[key],"<br>");
+            
+        }
+    }
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+비주얼 스튜디오 javascript Code editing
+	- 마이크로소프트의 무료 편집기
+
+ctrl+shift+k 행 삭제 - 해당하는 행이 커서에 있으면 됨
+ctrl+x 행 잘라내기 - 상동
+ctrl+c 행 복사 - 상동 
+
+alt+Down, alt+Up - CMOS에서 부팅 드라이브 순서 바꾸는 것 처럼 움직임
+
+ctrl+Enter - 아랫 줄에 행 삽입
+ctrl+shift+Enter - 윗줄에 행 삽입
+
+ctrl+alt+Down, Up - 커서를 연속적으로 만들어 사용가능
+
+ctrl+d - 다음 멀티선택
+ctrl+shift+l - 현재 문자와 같은 것은 모두 선택
+
+ctrl+],[ - 탭 , 커서가 위치하거나 선택되어져 있는 여러행도 가능
+
+
+(새롭고 편리한 기능들이 몰라보게 많아졌다. 인공기능에 대한 관심으로 기능도 대세를 따르는 듯.)

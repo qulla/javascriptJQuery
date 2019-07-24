@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>23.내장객체Array</title>
+</head>
+<body>
+    <script>
+    //Array 배열 구조를 가지고 있는 객체, 배열을 조작하기위한 메서드를 포함하고 있다.
+    var array=['가','나','다','라'];
+    // var array=new Array['가','나','다','라'];
+    
+    //배열의 데이터를 역순으로 출력
+    document.write(array.reverse() , '<br>');
+
+    //첫번째로 저장한 인텍스부터 두번째에 저정한 인텍스직전까지의 데이터를 잘라서 출력
+    document.write(array.slice(0,2)+ '<br>');
+
+    //알파벳 또는 숮자의 오름차순 정렬하기
+    document.write(array+ '<br>');
+    document.write(array.sort()+ '<br>');
+
+    //구분자로 연결하여 결합하기(join을 실행하면 문자열로 반환됨)
+    document.write(array.join('--'),'<br>');
+
+    //배열과 배열을 하나로 결합
+    var array2=['a','b'];
+    document.write( array.concat(array2),'<br>');
+    
+    //배열에서 첫 인덱스(0)에 저장된 
+    array.shift();
+    document.write(array ,'<br>');
+
+    //배열에서 마지막 인덱스에 저장된 데이를 삭제
+    array.pop();
+    document.write(array ,'<br>');
+
+    //배열에서 첫 인덱스(0)에 새로운 데이터 추가
+    array.unshift('새로운1');
+    document.write(array ,'<br>');
+
+    //배열에서 마지막 인덱스에 새로운 데이터 추가
+    array.push('새로운2');
+    document.write(array ,'<br>');
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22.내장객체Math</title>
+</head>
+<body>
+    <script>
+        //Math 수학과 과련된 메소드
+        var numbers=[1,23,45,23,2,3,200];
+        document.write('최대값: ' , Math.max(1,23,45,23,2,3), '<br>');
+        document.write('최대값: ' , Math.max(...numbers), '<br>');
+        document.write('최소값: ' , Math.min(...numbers), '<br>');
+        document.write('반올림:' , Math.round(3.57345), '<br>');
+        document.write('소솟점 올림:' , Math.ceil(3.121345), '<br>');
+        document.write('소솟점 버림:' , Math.floor(3.121345), '<br>');
+        document.write('소솟점 자리 지정:' , 3.121345.toFixed(2), '<br>');
+        document.write('절대값:' , Math.abs(-3.121345), '<br>');
+        document.write('0~1사이의 실수값 랜덤구하기:' , Math.random(), '<br>');
+        document.write('0~9사이의 실수값 랜덤구하기:' 
+                        , Math.floor(Math.random()*10), '<br>');
+        //문제) random()를 사용하여 배열의 값 랜덤으로 출력하기
+        var animals=['고양이','개','새','사자','사슴','곰'];
+        var index=0;
+        index=   Math.floor(Math.random() * animals.length);
+        document.write(animals[index]);
+
+        //문제)body의 배경색을 랜덤으로 바꾸기
+        // style="background:rgb(0, 0, 255)"
+        var r;
+        var g;
+        var b;
+        r= Math.ceil(Math.random()*256);
+        g= Math.ceil(Math.random()*256);
+        b= Math.ceil(Math.random()*256);
+        document.getElementsByTagName('body')[0].style.backgroundColor=`rgb(${r}, ${g}, ${b})`;
+        console.log(r);
+        
+
+    </script>
+    
+</body>
+</html>

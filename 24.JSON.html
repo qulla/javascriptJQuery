@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24.내장객체JSON</title>
+</head>
+<body>
+    <script>
+        /* 
+            JSON: 객체 형태를 가지는 문자열
+            문자열 형식이므로 서버와 데이터를 주고받을 때 사용하며
+            프로그래밍 언어에서 테이터저장 형식으로 많이 활용된다.
+            객체를 JSON문자령로 변환처리해주기 위해서 stringify()를 사용하고
+            데이터를 사용할 때 다시 객체로 변환처리히주는 parse()를 사용하다.
+
+            stringify() 객체를 JSON문자열료 변환
+            parse()     JSON문자열을 객체로 변환
+        */
+
+        var person={name:'홍길동', age:40, dity:'서울'};
+        console.log(person); //object
+        document.write(person,'<br>');
+       
+        // 객체를 JSON 문자열을 변화하기
+        var jsonPerson=JSON.stringify(person);
+        console.log(jsonPerson);//string
+        document.write(jsonPerson,'<br>');
+        
+
+        localStorage.setItem('person',jsonPerson);
+
+
+        // JSON 문자열을 개체로 변화하기
+        var objPerson = JSON.parse(jsonPerson);
+        document.write(objPerson,'<br>');
+
+
+
+
+
+    </script>
+</body>
+</html>

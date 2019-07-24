@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            내장함수=javascript에 내장되어 있느 ㄴ함수
+
+            [타이머함수]
+            setTimeout(함수이름 또는 익명함수, 밀리세컨즈) 일정시간 후 함수를 한번 실행
+            clearTimeout(setTimeout을 가리키고 있는 변수명) 일정시간 후 함수를 한번 실행하는 것을 멈춤
+
+            setInterval(함수이름 또는 익명함수, 밀리세컺즈) 일정시가마다 함수를 반복적으로 실행
+            clearInterval(setinterval을 가리키고 있는 변수명) 일정시간마다 함수를 반복적으로 실행하는 것을 멈춤
+        */
+
+        //2초 뒤에 화면에 메세지 출력
+        var msg=function(){
+            document.write('메세지가 출력됨');
+        }
+        //익명함수를 ㅂ가리키는 함수이름을 넣었을 경우
+        // paly1=setTimeout(msg,2000);
+        //setTimeout 멈춤
+        clearTimeout(paly1);
+
+        //2초마다 화면에 메세지 출력
+        play2=setInterval(msg,2000);
+        clearTimeout(paly2);
+
+    </script>
+    
+</body>
+</html>

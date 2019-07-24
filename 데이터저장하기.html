@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            배열사용 자료저장
+            프로젝트
+            조번호  /   프로젝트명  /    조원명                  /           진행률
+            1조,    신세계프로젝트,      전지민,송정은,김예리,홍혜영,              30%
+            2조,    카카오뱅크프로젝트,   정승연, 창은아,강유정,                   50%
+            3조,    공연예술프로젝트,     채리나,황희경,장지선,유창혜,신미나,         20%
+        */
+        var sum=0;
+        var project=[
+                        ['1조','신세계프로젝트',['전지민','송정은','김예리','홍혜영'],'30%'],
+                        ['2조','카카오뱅크프로젝트',['정승연','창은아','강유정'], '50%'],
+                        ['3조', '공연예술프로젝트',['채리나','황희경','장지선','유창혜','신미나'],'20%']
+            ];
+           for (let index = 0; index < project.length; index++) {
+                    document.write('조번호: ',project[index][0] , '<br>');
+                    document.write('프로젝트명: ',proj ect[index][1] , '<br>');
+                    document.write('조원명(',project[index][2].length ,'명): ',project[index][2] , '<br>');
+
+                    sum+= project[index][2].length;
+
+                    document.write('진행률: ',project[index][3] , '<br>');
+                    document.write('--------------------------------------<br>');
+            } 
+            
+            
+            document.write('총인원: ', sum,'<br>');
+            
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17.콜백함수</title>
+</head>
+<body>
+    <script>
+        //콜백함수: 다른 함수에 의해서 호출되는 함수를 말한다.
+        //ex) setInterval(function(){},1000) => function(){} 콜백함수
+
+        //콜백함수를 전달받아 실행하는 함수 만들기
+        function callTenTimes(call) {
+            for (let index = 0; index < 10; index++) {
+                call(index);
+            }
+        }
+        //콜백함수 만들기
+        var callback=function(i){
+            document.write('함수실행'+i,'<br>');
+        }
+        
+        //콜백함수를 10번 호출하는 함수
+        callTenTimes(callback);
+        
+    </script>
+
+
+
+</body>
+</html>

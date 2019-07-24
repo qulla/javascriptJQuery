@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 조건문: 참과 거짓의 결과가 나올 수 있는 식을 작성 후 우너하는 결과를 얻기위해 사용
+        // 현재시간을 기준으로 오전인지 오후인지 판별하기
+        
+        /*
+            [단일 if문의 형태]
+            if(조건문){
+                조건이 참(true)일 경우 실행할 문장
+            }
+        */
+        
+        var date=new Date(); //Date객체 생성(현재 날짜와 시간에 대한 정보를 가지고 있음)
+        var hours=date.getHours(); //현재 시간에 대한 정보 가져오기 0~23
+        // var hours=date.getSeconds(); //현재 초에 대한 정보 가져오기 0~23
+
+        console.log(hours);
+        
+        if(hours<12){
+            document.write('오전입니다.');
+        }
+
+        if(hours>=12){
+            document.write('오후입니다.');
+        }
+        document.write('<hr>');
+
+//--------------------------------------------
+        if(hours<12){
+            document.write('오전입니다.');
+        }else{
+            document.write('오후입니다.');
+        }
+        document.write('<hr>');
+//-----------------------------------------------
+        if(hours<12 && hours>=0){
+            document.write('오전입니다.');
+        }else if(hours>=12 && hours<24){
+            document.write('오후입니다.');
+        }else{
+            document.write('잘못된 값입력입니다.');
+        }
+        document.write('<hr>');
+//-------------------------------------------------
+        var month=date.getMonth()+1; // 0에서 부터 시작하니 1을 더해 준다.
+        console.log('현재 월',month);
+        var season; // 계절을 담을 수 있는 변수
+
+        if(month>=3 && month<=5){
+            season='봄';
+        }else if(month>=6 && month<=8){
+            season='여름';
+        }else if(month>=9 && month<=11){
+            season='가을';
+        }else{
+            season='겨울';
+        }
+
+
+        document.write(season,'입니다.');
+        document.write('<hr>');
+        
+
+       // 문제) 현재 요일을 숫자로 반환받고 숫자의 케이에 따라 현재 무슨요일인지 출력하기
+    /*
+        switch (key) {
+        case 값1:        break;
+        case 값2:        break;
+        default:        break;
+    }
+    */
+
+    var day=date.getDay(); //현재 요일대 해한 숫자를 대한 0~6
+    console.log('현재요일을 숫자로 출력',day);
+    /*
+        0   1   2   3   4   5   6
+        일   월  화  수  목   금   토
+    */
+    
+    switch (day) {
+        case 0: today='일요일'; break;
+        case 1: today='월요일'; break;
+        case 2: today='화요일'; break;
+        case 3: today='수요일'; break;
+        case 4: today='목요일'; break;
+        case 5: today='금요일'; break;
+        case 6: today='토요일'; break;
+
+    
+        default: today='잘못된 값.'; break;
+    }
+
+    document.write(today,'입니다.');
+    document.write('<hr>');
+
+
+    //문제)변수에 저장한 지역명이 케이스와 일치할 경우 지역번호 출력
+    var area='서울';
+    var areaNumber; //지역변호 저장하기
+    switch (area) {
+        case '서울': areaNumber='02'; break;
+        case '경기': areaNumber='031'; break;
+        case '부산': areaNumber='051'; break;
+        default:  areaNumber='기타 지역'; break;
+        
+    }
+    document.write(area,': ', areaNumber,'입니다.' );
+
+    </script>
+    
+</body>
+</html>

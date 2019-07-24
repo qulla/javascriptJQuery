@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>데이터저장하기(객체)</title>
+</head>
+<body>
+    <script>
+        /*
+            문제)아래의 데이터를 객체구조를 사용하여 저장하시오.
+
+            프로젝트
+            조번호 / 프로젝트명          / 조원명                    /     진행률 
+            1조      신세계프로젝트       전지민,송정은,김예리,홍혜영         30%
+            2조      카카오뱅크프로젝트    정승연,창은아,강유경               50%     
+            3조      공연예술프로젝트      채리나,황희경,장지선,유창혜,신미나    20% 
+
+            *힌트  =>각 조의 객체를 가리키는 키값이 있어야한다. 
+                     조번호/프로젝트명/조원명/진행률을 키값으로 설정한다.
+        */
+        var project={
+            data1:{
+                groupNumber: 1,
+                projectName: '신세계프로젝트',
+                member:['전지민','송정은','김예리','홍혜영'],
+                progress:30,
+            },
+            data2:{
+                groupNumber: 2,
+                projectName: '카카오뱅크프로젝트',
+                member:['정승연','창은아','강유경'],
+                progress:50,
+            },
+            data3:{
+                groupNumber: 3,
+                projectName: '공연예술프로젝트',
+                member:['채리나','창은아','강유경','유창혜','신미나'],
+                progress:20,
+            },
+        }
+        /*
+            project객체에 담긴 자료를 반복문, 조건문을 사용하여 다음패턴으로 출력하시오.
+
+            조번호:1조 
+            프로젝트명:신세계프로젝트
+            조원(4명):전지민 송정은 김예리 홍혜영
+            진행률:30%
+            ------------------------------------------------------
+            조번호:2조 
+            프로젝트명:신세계프로젝트
+            조원(3명):정승연 창은아 강유경
+            진행률:50%
+            ------------------------------------------------------
+            조번호:3조 
+            프로젝트명:공연예술프로젝트
+            조원(5명):채리나 황희경 장지선 유창혜 신미나
+            진행률:20%
+            ------------------------------------------------------
+            총인원 12명
+        */
+
+        document.write(`<h1>project객체에 담긴 자료를 반복문, 조건문을 사용하여 다음패턴으로 출력하시오.</h1>`);
+        var sumMember=0;                        //0으로 초기화해야 NaN 에러를 피할 수 있다.
+        var objN=Object.keys(project).length;   //몇개의 초가 있는지 확인
+        var groupN ="";                         //프롬프트로 입력받을 숫자의 변수지정
+        groupN =Number(prompt(objN+"개의 조가 있습니다. \n출력를 원하는 조의 숫자를 넣으세요","1")-1);
+
+        // console.log(groupN);
+        
+
+        if (groupN >= 0 && groupN <= 2  ) {
+            
+            var groupNS = Object.keys(project)[groupN];
+                    document.write(`---------------------------------------<br>`);
+                    document.write(`조번호: ${project[groupNS].groupNumber}조 <br>`);
+                    document.write(`프로젝트명: ${project[groupNS].projectName}<br>`);
+                    document.write(`조원(${project[groupNS].member.length}명): ${project[groupNS].member.join(" ")}<br>`);
+                    document.write(`진행률: ${project[groupNS].progress}%<br>`);
+                    document.write(`---------------------------------------<br>`);
+        } else {
+            for (const key in project) {
+                    document.write(`---------------------------------------<br>`);
+                    document.write(`조번호: ${project[key].groupNumber}조 <br>`);
+                    document.write(`프로젝트명: ${project[key].projectName}<br>`);
+                    document.write(`조원(${project[key].member.length}명): ${project[key].member.join(" ")}<br>`);
+                    document.write(`진행률: ${project[key].progress}%<br>`);
+                    document.write(`---------------------------------------<br>`);
+                    sumMember += project[key].member.length;
+                }
+                document.write(`총인원 (${sumMember}명)`);
+        }
+    </script>
+</body>
+</html>
