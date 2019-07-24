@@ -12,6 +12,7 @@
         if(navigator.platform){
             document.write(`navigator.platform: ${navigator.platform}<br>`);
             document.write(`filter: ${filter}<br>`);
+            document.write(filter.indexOf(navigator.platform.toLocaleLowerCase()));
             
             if( 0 > filter.indexOf(navigator.platform.toLocaleLowerCase())){
                  alert('모바일입니다.');
