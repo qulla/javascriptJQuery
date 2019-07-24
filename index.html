@@ -8,20 +8,20 @@
 </head>
 <body>
     <script>
-        var filter="win16|win64|mac|'linux armv81'|macintel";
+        var filter="win16|win32|win64|mac|macintel";
         if(navigator.platform){
             document.write(`navigator.platform: ${navigator.platform}<br>`);
             document.write(`filter: ${filter}<br>`);
             document.write(filter.indexOf(navigator.platform.toLocaleLowerCase()));
             
             if( 0 < filter.indexOf(navigator.platform.toLocaleLowerCase())){
-                 document.write('모바일입니다.');
-                // location.href='mobile.html';
+                 document.write('PC입니다..');
+                // location.href='pc.html';
             }else{            
-                console.log('pc자리');
-                document.write('PC입니다.');
                 
-                //location.href='pc.html';
+                document.write('모바일 자리 입니다.');
+                
+                //location.href='mobile.html';
            };
         }
         
